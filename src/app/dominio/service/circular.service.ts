@@ -5,6 +5,7 @@ import { CircularModel } from '../model/circular.model';
 import { CircularAlmacenadaError } from '../error/circular-almacenada.error';
 import { DiaEnum } from '../util/fechas/dia.enum';
 import { DiaNoHabilError } from '../error/dia-no-habil.error';
+import {CircularQueryType} from "../model/circular-query.type";
 
 export class CircularService {
   public static readonly MENSAJE_CIRCULAR_CREADA = 'Circular creada  correctamente';
@@ -32,6 +33,10 @@ export class CircularService {
 
   public async eliminar(idCircular: number) {
     await this.circularRepository.eliminar(idCircular);
+  }
+
+  public async listar(query: CircularQueryType) {
+    return this.circularRepository.listar(query);
   }
 
   public consultarDiaHabil(fecha: Date) {

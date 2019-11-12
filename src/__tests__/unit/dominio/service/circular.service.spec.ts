@@ -11,6 +11,7 @@ import { DiaNoHabilError } from '../../../../app/dominio/error/dia-no-habil.erro
 import { AlmacenarBuilder } from '../../builder/almacenar.builder';
 import { CircularBuilder } from '../../builder/circular.builder';
 import { CircularAlmacenadaError } from '../../../../app/dominio/error/circular-almacenada.error';
+import {CircularQueryType} from "../../../../app/dominio/model/circular-query.type";
 
 describe('CircularService', () => {
   let clasePrueba: CircularService;
@@ -116,6 +117,20 @@ describe('CircularService', () => {
 
       // Assert
       expect(circularRepositoryStub.eliminar.calledOnce).to.eql(metodoLlamadoUnaVez);
+    });
+  });
+
+  context('Cuando se lanzan pruebas al método listar', () => {
+    it('Debería llamar al método listar del repositorio circular', async () => {
+      // Arrange
+      const circularQuery: CircularQueryType = {};
+      const metodoLlamadoUnaVez = true;
+
+      // Act
+      await clasePrueba.listar(circularQuery);
+
+      // Assert
+      expect(circularRepositoryStub.listar.calledOnce).to.eql(metodoLlamadoUnaVez);
     });
   });
 });

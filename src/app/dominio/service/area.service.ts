@@ -17,7 +17,7 @@ export class AreaService {
     return area.getIdArea() ? AreaService.MENSAJE_AREA_MODIFICADA : AreaService.MENSAJE_AREA_ALMACENADA;
   }
 
-  public listar(descripcion?: string): Promise<AreaModel[]> {
+  public async listar(descripcion?: string): Promise<AreaModel[]> {
     return descripcion ? this.areaRepository.listarPorDescripcion(descripcion) : this.areaRepository.listar();
   }
 }

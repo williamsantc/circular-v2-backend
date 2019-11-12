@@ -5,7 +5,6 @@ export class AreaBuilder {
   private descripcion: string;
 
   constructor() {
-    this.idArea = 1;
     this.descripcion = 'desc';
   }
 
