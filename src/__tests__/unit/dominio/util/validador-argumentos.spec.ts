@@ -1,6 +1,6 @@
-import { ValidadorArgumentosUtil } from '../../../../app/domain/util/validador-argumentos.util';
 import { expect } from '@loopback/testlab';
-import { ValorRequeridoError } from '../../../../app/domain/error/valor-requerido.error';
+import { ValorRequeridoError } from '../../../../app/dominio/error/valor-requerido.error';
+import { ValidadorArgumentosUtil } from '../../../../app/dominio/util/validador-argumentos.util';
 
 describe('ValidadorArgumentosUtil', () => {
   const MENSAJE_PERSONALIZADO = 'Texto ejemplo';

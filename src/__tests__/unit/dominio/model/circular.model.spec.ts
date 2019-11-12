@@ -1,7 +1,7 @@
-import { expect } from '@loopback/testlab';
 import { TestsUtil } from '../../../util/tests.util';
-import { CircularModel } from '../../../../app/domain/model/circular.model';
-import { ValorRequeridoError } from '../../../../app/domain/error/valor-requerido.error';
+import { expect } from '@loopback/testlab';
+import { CircularModel } from '../../../../app/dominio/model/circular.model';
+import { ValorRequeridoError } from '../../../../app/dominio/error/valor-requerido.error';
 
 describe('CircularModel', () => {
   context('Cuando se lanzan pruebas al constructor de la clase', () => {

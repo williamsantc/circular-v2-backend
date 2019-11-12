@@ -1,16 +1,16 @@
-import { CircularService } from '../../../../app/domain/service/circular.service';
-import { CircularRepositoryPort } from '../../../../app/domain/port/circular.repository.port';
-import { AlmacenarRepositoryPort } from '../../../../app/domain/port/almacenar.repository.port';
-import { FestivosColombiaUtil } from '../../../../app/domain/util/fechas/festivos-colombia.util';
 import { expect, sinon } from '@loopback/testlab';
-import { CircularRepositoryAdapter } from '../../../../app/infrastructure/repository/circular.repository.adapter';
-import { AlmacenarRepositoryAdapter } from '../../../../app/infrastructure/repository/almacenar.repository.adapter';
+import { CircularService } from '../../../../app/dominio/service/circular.service';
 import { SinonStubbedInstance } from 'sinon';
-import { MesEnum } from '../../../../app/domain/util/fechas/mes.enum';
-import { DiaNoHabilError } from '../../../../app/domain/error/dia-no-habil.error';
-import { CircularBuilder } from '../../builder/circular.builder';
-import { CircularAlmacenadaError } from '../../../../app/domain/error/circular-almacenada.error';
+import { CircularRepositoryPort } from '../../../../app/dominio/port/circular.repository.port';
+import { AlmacenarRepositoryPort } from '../../../../app/dominio/port/almacenar.repository.port';
+import { FestivosColombiaUtil } from '../../../../app/dominio/util/fechas/festivos-colombia.util';
+import { CircularRepositoryAdapter } from '../../../../app/infraestructura/repository/circular.repository.adapter';
+import { AlmacenarRepositoryAdapter } from '../../../../app/infraestructura/repository/almacenar.repository.adapter';
+import { MesEnum } from '../../../../app/dominio/util/fechas/mes.enum';
+import { DiaNoHabilError } from '../../../../app/dominio/error/dia-no-habil.error';
 import { AlmacenarBuilder } from '../../builder/almacenar.builder';
+import { CircularBuilder } from '../../builder/circular.builder';
+import { CircularAlmacenadaError } from '../../../../app/dominio/error/circular-almacenada.error';
 
 describe('CircularService', () => {
   let clasePrueba: CircularService;

@@ -1,6 +1,6 @@
-import { DataExistenteError } from '../error/data-existente.error';
 import { AreaRepositoryPort } from '../port/area.repository.port';
 import { AreaModel } from '../model/area.model';
+import { DataExistenteError } from '../error/data-existente.error';
 
 export class AreaService {
   public static readonly MENSAJE_AREA_ALMACENADA = 'Area registrada correctamente';

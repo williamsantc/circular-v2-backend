@@ -1,4 +1,4 @@
-import { CircularModel } from '../../../app/domain/model/circular.model';
+import { CircularModel } from '../../../app/dominio/model/circular.model';
 
 export class CircularBuilder {
   private idCircular: number;

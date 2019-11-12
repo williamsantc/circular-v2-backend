@@ -1,5 +1,5 @@
-import { FestivosColombiaUtil } from '../../../../../app/domain/util/fechas/festivos-colombia.util';
-import { MesEnum } from '../../../../../app/domain/util/fechas/mes.enum';
+import { FestivosColombiaUtil } from '../../../../../app/dominio/util/fechas/festivos-colombia.util';
+import { MesEnum } from '../../../../../app/dominio/util/fechas/mes.enum';
 import { expect } from '@loopback/testlab';
 
 describe('FestivosColombiaUtil', () => {

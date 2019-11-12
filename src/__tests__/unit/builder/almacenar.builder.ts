@@ -1,4 +1,4 @@
-import { AlmacenarModel } from '../../../app/domain/model/almacenar.model';
+import { AlmacenarModel } from '../../../app/dominio/model/almacenar.model';
 
 export class AlmacenarBuilder {
   private idAlmacenar: number;

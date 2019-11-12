@@ -1,8 +1,8 @@
 import { TestsUtil } from '../../../util/tests.util';
 import { expect } from '@loopback/testlab';
-import { AlmacenarModel } from '../../../../app/domain/model/almacenar.model';
-import { InesperadoError } from '../../../../app/domain/error/inesperado.error';
-import { ValorRequeridoError } from '../../../../app/domain/error/valor-requerido.error';
+import { AlmacenarModel } from '../../../../app/dominio/model/almacenar.model';
+import { ValorRequeridoError } from '../../../../app/dominio/error/valor-requerido.error';
+import { InesperadoError } from '../../../../app/dominio/error/inesperado.error';
 
 describe('AlmacenarModel', () => {
   const ID_ALMACENAR = TestsUtil.anyNumber();

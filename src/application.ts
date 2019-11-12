@@ -5,7 +5,7 @@ import { RepositoryMixin } from '@loopback/repository';
 import { RestApplication } from '@loopback/rest';
 import { ServiceMixin } from '@loopback/service-proxy';
 import * as path from 'path';
-import { MySequence } from './app/infrastructure/config/sequence';
+import { MySequence } from './app/infraestructura/config/sequence';
 
 export class CircularApplication extends BootMixin(ServiceMixin(RepositoryMixin(RestApplication))) {
   constructor(options: ApplicationConfig = {}) {
