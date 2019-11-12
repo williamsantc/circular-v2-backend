@@ -1,0 +1,5 @@
+{
+  "name": "database",
+  "connector": "memory",
+  "file": "./resources/db.json"
+}
