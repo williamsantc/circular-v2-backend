@@ -3,7 +3,7 @@ import { InesperadoError } from '../error/inesperado.error';
 
 export class AlmacenarModel {
   public static readonly MENSAJE_CIRCULAR_REQUERIDA = 'La circular es requerida';
-  public static readonly MENSAJE_RUTA_REQUERIDA = 'La la ruta es requerida';
+  public static readonly MENSAJE_RUTA_REQUERIDA = 'La la ruta del archivo es requerida';
 
   private readonly idAlmacenar: number;
   private readonly idCircular: number;

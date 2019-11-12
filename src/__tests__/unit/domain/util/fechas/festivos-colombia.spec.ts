@@ -10,8 +10,8 @@ describe('FestivosColombiaUtil', () => {
     clasePrueba = new FestivosColombiaUtil(anioPrueba);
   });
 
-  context('cuando se lanzan pruebas al método esFestivo', () => {
-    it('debería arrojar true con fecha 19 agosto 2019', () => {
+  context('Cuando se lanzan pruebas al método esFestivo', () => {
+    it('Debería arrojar true con fecha 19 agosto 2019', () => {
       // Arrange
       const resultadoEsperado = true;
       const dia = 19;
@@ -23,7 +23,7 @@ describe('FestivosColombiaUtil', () => {
       expect(resultado).to.eql(resultadoEsperado);
     });
 
-    it('debería arrojar true con fecha 04 noviembre 2019', () => {
+    it('Debería arrojar true con fecha 04 noviembre 2019', () => {
       // Arrange
       const resultadoEsperado = true;
       const dia = 4;
@@ -35,7 +35,7 @@ describe('FestivosColombiaUtil', () => {
       expect(resultado).to.eql(resultadoEsperado);
     });
 
-    it('debería arrojar false con fecha 12 noviembre 2019', () => {
+    it('Debería arrojar false con fecha 12 noviembre 2019', () => {
       // Arrange
       const resultadoEsperado = false;
       const dia = 12;

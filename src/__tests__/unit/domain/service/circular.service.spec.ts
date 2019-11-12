@@ -28,8 +28,8 @@ describe('CircularService', () => {
     clasePrueba = new CircularService(circularRepositoryStub, almacenarRepositoryStub, festivosColombiaStub);
   });
 
-  context('cuando se lanzan pruebas al método consultarDiaHabil', () => {
-    it('debería arrojar el error DiaNoHabilError con día festivo colombiano', async () => {
+  context('Cuando se lanzan pruebas al método consultarDiaHabil', () => {
+    it('Debería arrojar el error DiaNoHabilError con día festivo colombiano', async () => {
       // Arrange
       festivosColombiaStub.esFestivo.returns(true);
       const fechaPrueba = new Date(anioPrueba, MesEnum.OCTUBRE, 28);
@@ -40,7 +40,7 @@ describe('CircularService', () => {
         .rejectedWith(new DiaNoHabilError(CircularService.MENSAJE_DIA_NO_HABIL));
     });
 
-    it('debería arrojar el error DiaNoHabilError con día sábado', async () => {
+    it('Debería arrojar el error DiaNoHabilError con día sábado', async () => {
       // Arrange
       festivosColombiaStub.esFestivo.returns(false);
       const fechaPrueba = new Date(anioPrueba, MesEnum.NOVIEMBRE, 9);
@@ -51,7 +51,7 @@ describe('CircularService', () => {
         .rejectedWith(new DiaNoHabilError(CircularService.MENSAJE_DIA_NO_HABIL));
     });
 
-    it('debería arrojar el error DiaNoHabilError con día domingo', async () => {
+    it('Debería arrojar el error DiaNoHabilError con día domingo', async () => {
       // Arrange
       festivosColombiaStub.esFestivo.returns(false);
       const fechaPrueba = new Date(anioPrueba, MesEnum.NOVIEMBRE, 10);
@@ -63,8 +63,8 @@ describe('CircularService', () => {
     });
   });
 
-  context('cuando se lanzan pruebas al método guardar', () => {
-    it('debería arrojar el error CircularAlmacenadaError con circular previamente almacenada', async () => {
+  context('Cuando se lanzan pruebas al método guardar', () => {
+    it('Debería arrojar el error CircularAlmacenadaError con circular previamente almacenada', async () => {
       // Arrange
       const almacenar = new AlmacenarBuilder().build();
       const circular = new CircularBuilder().withIdCircular(1).build();
@@ -76,7 +76,7 @@ describe('CircularService', () => {
         .rejectedWith(new CircularAlmacenadaError(CircularService.MENSAJE_CARGA_CIRCULAR_REALIZADA));
     });
 
-    it('debería arrojar texto de guardado exitoso', async () => {
+    it('Debería arrojar texto de guardado exitoso', async () => {
       // Arrange
       const textoEsperado = CircularService.MENSAJE_CIRCULAR_CREADA;
       const circular = new CircularBuilder().build();
@@ -90,7 +90,7 @@ describe('CircularService', () => {
       expect(texto).to.eql(textoEsperado);
     });
 
-    it('debería arrojar texto de cambios almacenados', async () => {
+    it('Debería arrojar texto de cambios almacenados', async () => {
       // Arrange
       const textoEsperado = CircularService.MENSAJE_CIRCULAR_MODIFICADA;
       const circular = new CircularBuilder().withIdCircular(1).build();
@@ -105,8 +105,8 @@ describe('CircularService', () => {
     });
   });
 
-  context('cuando se lanzan pruebas al método eliminar', () => {
-    it('debería llamar al método eliminar del repositorio circular', async () => {
+  context('Cuando se lanzan pruebas al método eliminar', () => {
+    it('Debería llamar al método eliminar del repositorio circular', async () => {
       // Arrange
       const idCircular = 1;
       const metodoLlamadoUnaVez = true;
